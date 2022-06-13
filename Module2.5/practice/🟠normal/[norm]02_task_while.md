@@ -16,7 +16,16 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+counter = 0
+n = 0
+m: str = "стоп"
+
+while n != m:
+    n = int(input("Введите целое число: "))
+    if n > 0:
+        counter += 1
+    print("Количество положительных чисел", counter)
+.
 ```
 
 ---
