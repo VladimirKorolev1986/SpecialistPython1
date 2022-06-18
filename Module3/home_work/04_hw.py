@@ -5,3 +5,12 @@
 # Пример:
 # Дано: [2, -5, 8, 9, -25, 25, 4]
 # Результат: [3, 5, 2]
+list_old = [2, -5, 8, 9, -25, 25, 4]
+list_new = []
+i=0
+
+for i in list_old:
+    if i>0 and (i**0.5)%1==0:
+        list_new.append(int(i**0.5))
+print(list_new)
+
