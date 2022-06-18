@@ -3,7 +3,10 @@
 
 names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
 
-# TODO: your code here
+# n = ["name1", "name2", "name3", "name4"]
+name_str= ",".join(n)
+print(name_str)
+
 
 # Пример вывода:
 # Иван, Ирина, Вячеслав, Василий, Петр
