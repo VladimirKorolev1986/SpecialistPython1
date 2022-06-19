@@ -5,7 +5,15 @@
 # Исходные данные:
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 
-# TODO: your code here
+fruits = ["яблоко", "банан", "киви", "арбуз"]
+numbers = 1
+max_length = 0
+
+for fruit in fruits:
+    if max_length < len(fruit):
+        max_length = len(fruit)
+        numbers += 1
+    print(f"{numbers} {fruit:>{max_length}}")
 
 # Пример вывода:
 # 1. яблоко
