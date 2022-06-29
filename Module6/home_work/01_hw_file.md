@@ -16,7 +16,14 @@
 
 ```python
 def log(text, file="log.txt"):
-    ...
+       if file == 'log01.txt':
+        p = open('log01.txt', 'a')
+        p.write("message" + "\n")
+        return p
+    else:
+        p = open('log.txt', 'a')
+        p.write("Hello world" + "\n")
+        return p
 
 log("hello world")  # дописывает "hello world" в конец файла log.txt
 log("message", "log01.txt")  # дописывает "message" в конец файла log01.txt
