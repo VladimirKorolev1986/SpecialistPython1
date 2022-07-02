@@ -16,11 +16,19 @@
 ### Решение задачи
 
 ```python
-summa = 0
-with open("data/info.txt", "r") as f:
-    pass
 
-print(f"Сумма чисел = {summa}")
+summa = 0
+with open("data/info.txt", "r", encoding="UTF-8") as f:
+    for line in f:
+        if line.rstrip().isdigit():
+            summa += int(line)
+        elif line[0] == '-' and line[1].isdigit():
+            summa += int(line)
+
+with open("data/info.txt", "a", encoding="UTF-8") as f:
+    f.write(f'Сумма чисел равна = {summa}')
+
+
 # Уточнение: в сумму добавляем только те значения, которые можно преобразовать к int'у
 # Например: int("-26") --> -26, а int("--26") --> ошибка
 ```
