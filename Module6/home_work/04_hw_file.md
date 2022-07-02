@@ -22,7 +22,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+with open('fruits.txt', 'r', encoding='utf-8') as f:
+    for line in f:
+        if line[0] != '\n':
+            name = line[0]
+            name_file = 'fruits_' + name + '.txt'
+            temp = line
+            with open(name_file, 'a', encoding='utf-8') as f:
+                f.write(temp)
 ```
 
 ---
