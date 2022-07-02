@@ -35,7 +35,11 @@ n = 6
 
 ```python
 n = int(input("n: "))
-# TODO: you code here...
+counter = 1
+with open('111.txt', 'a', encoding='UTF-8') as f:
+    for _ in range(n):
+        f.write(f"{'*' * counter:^{n * 2}}\n")
+        counter += 2
 ```
 
 ---
