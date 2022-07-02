@@ -21,8 +21,20 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
+with open('data\workers.txt', 'r', encoding='utf-8') as f:
+    for line in f:
+        tabl = line.rstrip().split()
+        if tabl[2].isdigit():
+            surname = tabl[1]
+
+            cash_in_hour = int(tabl[2]) / int(tabl[4])
+            with open('data\hours_of.txt', 'r', encoding='utf-8') as f_h:
+                for line_new in f_h:
+                    tabl_new = line_new.rstrip().split()
+                    if tabl[2].isdigit():
+                        for i in tabl_new:
+                            if i == surname:
+                                print(f"Зарплата {i} равна {round(cash_in_hour * int(tabl_new[2]))}")
 ```
 
 ---
